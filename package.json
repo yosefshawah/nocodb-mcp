@@ -1,25 +1,21 @@
 {
-  "name": "weather",
+  "name": "nocodb-mcp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "module",
   "bin": {
-    "weather": "./build/index.js"
+    "nocodb-mcp": "./build/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod 755 build/index.js"
+    "build": "tsc && chmod +x build/index.js",
+    "dev": "tsx watch src/index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^24.5.1",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "files": [
